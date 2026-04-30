@@ -1,0 +1,71 @@
+/* Paleta de colores oscuros y temáticos */
+:root {
+    --bg-dark: #0d0d12;
+    --surface-dark: #16161d;
+    --ana-red: #ff0040;
+    --ana-cyan: #00f0ff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bg-dark);
+    color: #ffffff;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+main {
+    flex: 1;
+}
+
+/* Efecto anaglifo en el texto del título */
+.anaglyph-title {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 0 var(--ana-red), -2px 0 var(--ana-cyan);
+    transition: text-shadow 0.3s ease;
+}
+
+.anaglyph-title:hover {
+    text-shadow: 4px 0 var(--ana-red), -4px 0 var(--ana-cyan);
+}
+
+/* Glassmorphism sutil para el Navbar y el Footer */
+.custom-navbar {
+    background-color: rgba(22, 22, 29, 0.8) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.custom-footer {
+    background-color: var(--surface-dark);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Contenedor del carrusel con un ligero brillo neón */
+.carousel-wrapper {
+    max-width: 1000px; /* Limita el ancho en pantallas grandes para que no se deforme */
+    border-radius: 12px;
+    padding: 5px;
+    background: linear-gradient(45deg, rgba(255,0,64,0.2), rgba(0,240,255,0.2));
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.carousel-inner {
+    background-color: #000000; /* Fondo negro puro para maximizar el contraste 3D */
+}
+
+/* Ajuste de imágenes */
+.carousel-item img {
+    height: 70vh; 
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+}
+
+.subtitle-glow {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
