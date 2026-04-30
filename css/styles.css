@@ -45,7 +45,7 @@ main {
 
 /* Contenedor del carrusel con un ligero brillo neón */
 .carousel-wrapper {
-    max-width: 1000px; /* Limita el ancho en pantallas grandes para que no se deforme */
+    max-width: 600px; /* Limita el ancho en pantallas grandes para que no se deforme */
     border-radius: 12px;
     padding: 5px;
     background: linear-gradient(45deg, rgba(255,0,64,0.2), rgba(0,240,255,0.2));
@@ -68,4 +68,5 @@ main {
     letter-spacing: 2px;
     text-transform: uppercase;
     font-size: 0.9rem;
+    color: #b0b0c0 !important;
 }
