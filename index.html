@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <!-- Navbar actualizada con enlaces -->
+    <!-- Navbar actualizada con enlaces y botón de ayuda -->
     <nav class="navbar navbar-expand-lg navbar-dark shadow-sm custom-navbar">
         <div class="container-fluid">
             <!-- Título / Logo -->
@@ -23,12 +23,16 @@
             
             <!-- Enlaces del menú -->
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="ENLACE_A_TU_DRIVE" target="_blank" rel="noopener noreferrer">📁 Google Drive original</a>
+                        <a class="nav-link" href="https://drive.google.com/drive/folders/1j5oZlfe6s0bEoTWBH40JeED51878o6TO?usp=sharing" target="_blank" rel="noopener noreferrer">📁 Google Drive Imagenes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="ENLACE_A_TU_GITHUB" target="_blank" rel="noopener noreferrer">💻 Repositorio GitHub</a>
+                        <a class="nav-link" href="https://github.com/Neffex010/-3.2-Im-genes-anaglifo" target="_blank" rel="noopener noreferrer">💻 Repositorio GitHub</a>
+                    </li>
+                    <!-- Botón del Modal de Instrucciones -->
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <button class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#instruccionesModal">❔ Ayuda</button>
                     </li>
                 </ul>
             </div>
@@ -38,7 +42,12 @@
     <main class="container mt-4 mb-5 d-flex flex-column align-items-center">
         <p class="text-center mb-4 subtitle-glow">Galería 3D - Requiere Gafas Rojo/Cian</p>
 
-        <div class="carousel-wrapper">
+        <!-- Contenedor principal con ID para pantalla completa -->
+        <div class="carousel-wrapper" id="contenedorGaleria">
+            
+            <!-- Botón de Pantalla Completa -->
+            <button id="btnFullscreen" class="btn-fullscreen" title="Alternar Pantalla Completa">⛶</button>
+
             <div id="carouselAnaglifo" class="carousel slide" data-bs-ride="carousel">
                 
                 <div class="carousel-indicators">
@@ -62,77 +71,77 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="bg-blur" style="background-image: url('img/arbolitoAnaglifo.JPG');"></div>
-                        <img src="img/arbolitoAnaglifo.JPG" class="main-img" alt="Arbolito">
+                        <img src="img/arbolitoAnaglifo.JPG" class="main-img" alt="Arbolito" loading="lazy">
                     </div>
                     
                     <div class="carousel-item">
                         <div class="bg-blur" style="background-image: url('img/florAnaglifo.JPG');"></div>
-                        <img src="img/florAnaglifo.JPG" class="main-img" alt="Flor">
+                        <img src="img/florAnaglifo.JPG" class="main-img" alt="Flor" loading="lazy">
                     </div>
 
                     <div class="carousel-item">
                         <div class="bg-blur" style="background-image: url('img/gimnacioAnaglifo.JPG');"></div>
-                        <img src="img/gimnacioAnaglifo.JPG" class="main-img" alt="Gimnasio">
+                        <img src="img/gimnacioAnaglifo.JPG" class="main-img" alt="Gimnasio" loading="lazy">
                     </div>
 
                     <div class="carousel-item">
                         <div class="bg-blur" style="background-image: url('img/jirafaAnaglifo.JPG');"></div>
-                        <img src="img/jirafaAnaglifo.JPG" class="main-img" alt="Jirafa">
+                        <img src="img/jirafaAnaglifo.JPG" class="main-img" alt="Jirafa" loading="lazy">
                     </div>
 
                     <div class="carousel-item">
                         <div class="bg-blur" style="background-image: url('img/LlaveroAnaglifo.JPG');"></div>
-                        <img src="img/LlaveroAnaglifo.JPG" class="main-img" alt="Llavero">
+                        <img src="img/LlaveroAnaglifo.JPG" class="main-img" alt="Llavero" loading="lazy">
                     </div>
 
                     <div class="carousel-item">
                         <div class="bg-blur" style="background-image: url('img/ME_ANAGLIFO.JPG');"></div>
-                        <img src="img/ME_ANAGLIFO.JPG" class="main-img" alt="Yo">
+                        <img src="img/ME_ANAGLIFO.JPG" class="main-img" alt="Yo" loading="lazy">
                     </div>
 
                     <div class="carousel-item">
                         <div class="bg-blur" style="background-image: url('img/nopalesAnaglifo.JPG');"></div>
-                        <img src="img/nopalesAnaglifo.JPG" class="main-img" alt="Nopales">
+                        <img src="img/nopalesAnaglifo.JPG" class="main-img" alt="Nopales" loading="lazy">
                     </div>
 
                     <div class="carousel-item">
                         <div class="bg-blur" style="background-image: url('img/pacmanAnaglifo.JPG');"></div>
-                        <img src="img/pacmanAnaglifo.JPG" class="main-img" alt="Pacman">
+                        <img src="img/pacmanAnaglifo.JPG" class="main-img" alt="Pacman" loading="lazy">
                     </div>
 
                     <div class="carousel-item">
                         <div class="bg-blur" style="background-image: url('img/Panas_Anaglifo.JPG');"></div>
-                        <img src="img/Panas_Anaglifo.JPG" class="main-img" alt="Panas">
+                        <img src="img/Panas_Anaglifo.JPG" class="main-img" alt="Panas" loading="lazy">
                     </div>
 
                     <div class="carousel-item">
                         <div class="bg-blur" style="background-image: url('img/pasillosAnaglifo.JPG');"></div>
-                        <img src="img/pasillosAnaglifo.JPG" class="main-img" alt="Pasillos">
+                        <img src="img/pasillosAnaglifo.JPG" class="main-img" alt="Pasillos" loading="lazy">
                     </div>
 
                     <div class="carousel-item">
                         <div class="bg-blur" style="background-image: url('img/plasticplanta2Anaglifo.JPG');"></div>
-                        <img src="img/plasticplanta2Anaglifo.JPG" class="main-img" alt="Planta 2">
+                        <img src="img/plasticplanta2Anaglifo.JPG" class="main-img" alt="Planta 2" loading="lazy">
                     </div>
 
                     <div class="carousel-item">
                         <div class="bg-blur" style="background-image: url('img/PlasticPlantaAnaglifo.JPG');"></div>
-                        <img src="img/PlasticPlantaAnaglifo.JPG" class="main-img" alt="Planta">
+                        <img src="img/PlasticPlantaAnaglifo.JPG" class="main-img" alt="Planta" loading="lazy">
                     </div>
 
                     <div class="carousel-item">
                         <div class="bg-blur" style="background-image: url('img/puerquito_anaglifo.JPG');"></div>
-                        <img src="img/puerquito_anaglifo.JPG" class="main-img" alt="Puerquito">
+                        <img src="img/puerquito_anaglifo.JPG" class="main-img" alt="Puerquito" loading="lazy">
                     </div>
 
                     <div class="carousel-item">
                         <div class="bg-blur" style="background-image: url('img/RobotAnaglifo.JPG');"></div>
-                        <img src="img/RobotAnaglifo.JPG" class="main-img" alt="Robot">
+                        <img src="img/RobotAnaglifo.JPG" class="main-img" alt="Robot" loading="lazy">
                     </div>
 
                     <div class="carousel-item">
                         <div class="bg-blur" style="background-image: url('img/calleAnaglifo.JPG');"></div>
-                        <img src="img/calleAnaglifo.JPG" class="main-img" alt="Calle">
+                        <img src="img/calleAnaglifo.JPG" class="main-img" alt="Calle" loading="lazy">
                     </div>
                 </div>
                 
@@ -152,6 +161,29 @@
             <p class="mb-0 small text-secondary">Ingeniería en TICS | Tecnológico de Pachuca</p>
         </div>
     </footer>
+
+    <!-- Modal de Instrucciones -->
+    <div class="modal fade" id="instruccionesModal" tabindex="-1" aria-labelledby="instruccionesModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border-secondary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-info" id="instruccionesModalLabel">👓 ¿Cómo ver la galería en 3D?</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="mb-0">
+                        <li class="mb-2"><strong>Tus gafas:</strong> Asegúrate de usar gafas anaglifo con el lente <strong>Rojo en el ojo izquierdo</strong> y el <strong>Cian (azul) en el derecho</strong>.</li>
+                        <li class="mb-2"><strong>Iluminación:</strong> Sube el brillo de tu pantalla al máximo para mejorar el contraste de los colores.</li>
+                        <li class="mb-2"><strong>Distancia:</strong> Aléjate aproximadamente a 50-70 cm de la pantalla. Si ves las imágenes "dobles", mueve tu cabeza ligeramente hacia atrás o hacia adelante hasta que tu cerebro fusione la imagen.</li>
+                        <li><strong>Navegación:</strong> Puedes usar las flechas <kbd>←</kbd> y <kbd>→</kbd> de tu teclado para cambiar de foto fácilmente.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">¡Entendido!</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/app.js"></script>
