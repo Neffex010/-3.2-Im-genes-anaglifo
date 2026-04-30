@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visor Estereoscópico Anaglifo</title>
-    
+    <title>Visor 3D Anaglifo | Galería ITICS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👓</text></svg>">
@@ -17,95 +16,121 @@
         </div>
     </nav>
 
-    <main class="container mt-5 mb-5 d-flex flex-column align-items-center">
-        
-        <p class="text-center text-muted mb-4 subtitle-glow">Galería 3D - Requiere Gafas Rojo/Cian</p>
+    <main class="container mt-4 mb-5 d-flex flex-column align-items-center">
+        <p class="text-center mb-4 subtitle-glow">Galería 3D - Requiere Gafas Rojo/Cian</p>
 
-        <div class="carousel-wrapper w-100">
-            <div id="carouselAnaglifo" class="carousel slide shadow-lg" data-bs-ride="carousel">
-                <div class="carousel-inner rounded-3">
-                    
-                    <!-- Imagen 1 (Activa) -->
+        <div class="carousel-wrapper">
+            <div id="carouselAnaglifo" class="carousel slide" data-bs-ride="carousel">
+                
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselAnaglifo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carouselAnaglifo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselAnaglifo" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#carouselAnaglifo" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#carouselAnaglifo" data-bs-slide-to="4"></button>
+                    <button type="button" data-bs-target="#carouselAnaglifo" data-bs-slide-to="5"></button>
+                    <button type="button" data-bs-target="#carouselAnaglifo" data-bs-slide-to="6"></button>
+                    <button type="button" data-bs-target="#carouselAnaglifo" data-bs-slide-to="7"></button>
+                    <button type="button" data-bs-target="#carouselAnaglifo" data-bs-slide-to="8"></button>
+                    <button type="button" data-bs-target="#carouselAnaglifo" data-bs-slide-to="9"></button>
+                    <button type="button" data-bs-target="#carouselAnaglifo" data-bs-slide-to="10"></button>
+                    <button type="button" data-bs-target="#carouselAnaglifo" data-bs-slide-to="11"></button>
+                    <button type="button" data-bs-target="#carouselAnaglifo" data-bs-slide-to="12"></button>
+                    <button type="button" data-bs-target="#carouselAnaglifo" data-bs-slide-to="13"></button>
+                    <button type="button" data-bs-target="#carouselAnaglifo" data-bs-slide-to="14"></button>
+                </div>
+
+                <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="img/arbolitoAnaglifo.JPG" class="d-block w-100" alt="Arbolito">
+                        <div class="bg-blur" style="background-image: url('img/arbolitoAnaglifo.JPG');"></div>
+                        <img src="img/arbolitoAnaglifo.JPG" class="main-img" alt="Arbolito">
                     </div>
-                    <!-- Imagen 2 -->
+                    
                     <div class="carousel-item">
-                        <img src="img/florAnaglifo.JPG" class="d-block w-100" alt="Flor">
-                    </div>
-                    <!-- Imagen 3 -->
-                    <div class="carousel-item">
-                        <img src="img/gimnacioAnaglifo.JPG" class="d-block w-100" alt="Gimnasio">
-                    </div>
-                    <!-- Imagen 4 -->
-                    <div class="carousel-item">
-                        <img src="img/jirafaAnaglifo.JPG" class="d-block w-100" alt="Jirafa">
-                    </div>
-                    <!-- Imagen 5 -->
-                    <div class="carousel-item">
-                        <img src="img/LlaveroAnaglifo.JPG" class="d-block w-100" alt="Llavero">
-                    </div>
-                    <!-- Imagen 6 -->
-                    <div class="carousel-item">
-                        <img src="img/ME ANAGLIFO.JPG" class="d-block w-100" alt="Retrato personal">
-                    </div>
-                    <!-- Imagen 7 -->
-                    <div class="carousel-item">
-                        <img src="img/nopalesAnaglifo.JPG" class="d-block w-100" alt="Nopales">
-                    </div>
-                    <!-- Imagen 8 -->
-                    <div class="carousel-item">
-                        <img src="img/pacmanAnaglifo.JPG" class="d-block w-100" alt="Pacman">
-                    </div>
-                    <!-- Imagen 9 -->
-                    <div class="carousel-item">
-                        <img src="img/Panas Anaglifo.JPG" class="d-block w-100" alt="Amigos">
-                    </div>
-                    <!-- Imagen 10 -->
-                    <div class="carousel-item">
-                        <img src="img/pasillosAnaglifo.JPG" class="d-block w-100" alt="Pasillos">
-                    </div>
-                    <!-- Imagen 11 -->
-                    <div class="carousel-item">
-                        <img src="img/plasticplanta2Anaglifo.JPG" class="d-block w-100" alt="Planta de plástico 2">
-                    </div>
-                    <!-- Imagen 12 -->
-                    <div class="carousel-item">
-                        <img src="img/PlasticPlantaAnaglifo.JPG" class="d-block w-100" alt="Planta de plástico">
-                    </div>
-                    <!-- Imagen 13 -->
-                    <div class="carousel-item">
-                        <img src="img/puerquito anaglifo.JPG" class="d-block w-100" alt="Puerquito">
-                    </div>
-                    <!-- Imagen 14 -->
-                    <div class="carousel-item">
-                        <img src="img/RobotAnaglifo.JPG" class="d-block w-100" alt="Robot">
-                    </div>
-                    <!-- Imagen 15 -->
-                    <div class="carousel-item">
-                        <img src="img/calleAnaglifo.JPG" class="d-block w-100" alt="Calle">
+                        <div class="bg-blur" style="background-image: url('img/florAnaglifo.JPG');"></div>
+                        <img src="img/florAnaglifo.JPG" class="main-img" alt="Flor">
                     </div>
 
+                    <div class="carousel-item">
+                        <div class="bg-blur" style="background-image: url('img/gimnacioAnaglifo.JPG');"></div>
+                        <img src="img/gimnacioAnaglifo.JPG" class="main-img" alt="Gimnasio">
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="bg-blur" style="background-image: url('img/jirafaAnaglifo.JPG');"></div>
+                        <img src="img/jirafaAnaglifo.JPG" class="main-img" alt="Jirafa">
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="bg-blur" style="background-image: url('img/LlaveroAnaglifo.JPG');"></div>
+                        <img src="img/LlaveroAnaglifo.JPG" class="main-img" alt="Llavero">
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="bg-blur" style="background-image: url('img/ME_ANAGLIFO.JPG');"></div>
+                        <img src="img/ME ANAGLIFO.JPG" class="main-img" alt="Yo">
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="bg-blur" style="background-image: url('img/nopalesAnaglifo.JPG');"></div>
+                        <img src="img/nopalesAnaglifo.JPG" class="main-img" alt="Nopales">
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="bg-blur" style="background-image: url('img/pacmanAnaglifo.JPG');"></div>
+                        <img src="img/pacmanAnaglifo.JPG" class="main-img" alt="Pacman">
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="bg-blur" style="background-image: url('img/Panas_Anaglifo.JPG');"></div>
+                        <img src="img/Panas Anaglifo.JPG" class="main-img" alt="Panas">
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="bg-blur" style="background-image: url('img/pasillosAnaglifo.JPG');"></div>
+                        <img src="img/pasillosAnaglifo.JPG" class="main-img" alt="Pasillos">
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="bg-blur" style="background-image: url('img/plasticplanta2Anaglifo.JPG');"></div>
+                        <img src="img/plasticplanta2Anaglifo.JPG" class="main-img" alt="Planta 2">
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="bg-blur" style="background-image: url('img/PlasticPlantaAnaglifo.JPG');"></div>
+                        <img src="img/PlasticPlantaAnaglifo.JPG" class="main-img" alt="Planta">
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="bg-blur" style="background-image: url('img/puerquito_anaglifo.JPG');"></div>
+                        <img src="img/puerquito anaglifo.JPG" class="main-img" alt="Puerquito">
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="bg-blur" style="background-image: url('img/RobotAnaglifo.JPG');"></div>
+                        <img src="img/RobotAnaglifo.JPG" class="main-img" alt="Robot">
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="bg-blur" style="background-image: url('img/calleAnaglifo.JPG');"></div>
+                        <img src="img/calleAnaglifo.JPG" class="main-img" alt="Calle">
+                    </div>
                 </div>
                 
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselAnaglifo" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselAnaglifo" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Siguiente</span>
                 </button>
             </div>
         </div>
-
     </main>
 
     <footer class="text-white text-center py-4 mt-auto custom-footer">
         <div class="container">
-            <p class="mb-1 fw-bold text-light">Desarrollado por [Tu Nombre Completo]</p>
-            <p class="mb-0 small text-secondary">Estudiante de Ingeniería en Tecnologías de la Información y Comunicaciones (ITICS)</p>
-            <p class="mb-0 small text-secondary">Tecnológico de Pachuca</p>
+            <p class="mb-1 fw-bold text-light">Desarrollado por [Tu Nombre]</p>
+            <p class="mb-0 small text-secondary">Ingeniería en TIC | Tecnológico de Pachuca</p>
         </div>
     </footer>
 

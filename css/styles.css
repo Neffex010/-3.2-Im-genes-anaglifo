@@ -1,4 +1,4 @@
-/* Paleta de colores oscuros y temáticos */
+/* Paleta de colores y variables */
 :root {
     --bg-dark: #0d0d12;
     --surface-dark: #16161d;
@@ -15,58 +15,80 @@ body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
-main {
-    flex: 1;
-}
+main { flex: 1; }
 
-/* Efecto anaglifo en el texto del título */
 .anaglyph-title {
     font-weight: 700;
-    letter-spacing: 1px;
     text-shadow: 2px 0 var(--ana-red), -2px 0 var(--ana-cyan);
-    transition: text-shadow 0.3s ease;
 }
 
-.anaglyph-title:hover {
-    text-shadow: 4px 0 var(--ana-red), -4px 0 var(--ana-cyan);
-}
-
-/* Glassmorphism sutil para el Navbar y el Footer */
-.custom-navbar {
-    background-color: rgba(22, 22, 29, 0.8) !important;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.custom-footer {
-    background-color: var(--surface-dark);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* Contenedor del carrusel con un ligero brillo neón */
-.carousel-wrapper {
-    max-width: 600px; /* Limita el ancho en pantallas grandes para que no se deforme */
-    border-radius: 12px;
-    padding: 5px;
-    background: linear-gradient(45deg, rgba(255,0,64,0.2), rgba(0,240,255,0.2));
-    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-}
-
-.carousel-inner {
-    background-color: #000000; /* Fondo negro puro para maximizar el contraste 3D */
-}
-
-/* Ajuste de imágenes */
-.carousel-item img {
-    height: 70vh; 
-    object-fit: contain;
-    border-radius: 8px;
-    transition: transform 0.5s ease;
-}
-
+/* MEJORA: Subtítulo con mejor contraste */
 .subtitle-glow {
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-size: 0.9rem;
-    color: #b0b0c0 !important;
+    font-size: 0.85rem;
+    color: #a0a0b0; /* Gris claro para legibilidad */
 }
+
+/* EFECTO: Fondo desenfocado para fotos verticales */
+.carousel-item {
+    height: 75vh;
+    position: relative;
+    background-color: #000;
+    overflow: hidden;
+}
+
+/* Capa de fondo que se desenfoca */
+.bg-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(25px) brightness(0.4);
+    transform: scale(1.1); /* Evita bordes blancos por el desenfoque */
+    z-index: 1;
+}
+
+/* Imagen principal (enfocada y centrada) */
+.carousel-item img.main-img {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    object-fit: contain;
+    display: block;
+}
+
+.carousel-wrapper {
+    max-width: 1100px;
+    width: 95%;
+    border-radius: 15px;
+    padding: 4px;
+    background: linear-gradient(45deg, rgba(255,0,64,0.3), rgba(0,240,255,0.3));
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+.carousel-inner { border-radius: 12px; }
+
+/* MEJORA: Indicadores personalizados */
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--ana-cyan);
+    opacity: 0.5;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: var(--ana-red);
+    box-shadow: 0 0 10px var(--ana-red);
+}
+
+.custom-navbar { background-color: rgba(22, 22, 29, 0.9) !important; backdrop-filter: blur(10px); }
+.custom-footer { background-color: var(--surface-dark); border-top: 1px solid rgba(255, 255, 255, 0.05); }
